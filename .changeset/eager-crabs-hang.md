@@ -1,5 +1,0 @@
----
-'@thecodinghqs/ui': patch
----
-
-initial
