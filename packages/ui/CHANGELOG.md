@@ -1,5 +1,11 @@
 # @thecodinghqs/ui
 
+## 0.1.3
+
+### Patch Changes
+
+- Update React peer dependency to allow React 19
+
 ## 0.1.2
 
 ### Patch Changes
