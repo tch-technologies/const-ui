@@ -1,5 +1,11 @@
 # @thecodinghqs/ui
 
+## 0.1.4
+
+### Patch Changes
+
+- feat: initialize Storybook in docs app, upgrade Storybook dependencies, and update ESLint configuration
+
 ## 0.1.3
 
 ### Patch Changes
