@@ -1,5 +1,11 @@
 # @thecodinghqs/ui
 
+## 0.2.0
+
+### Minor Changes
+
+- Added Badge, Combobox, Dialog, Popover, Progress, RadioGroup, Select, and Switch components.
+
 ## 0.1.4
 
 ### Patch Changes
