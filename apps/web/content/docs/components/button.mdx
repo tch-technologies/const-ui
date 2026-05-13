@@ -1,0 +1,33 @@
+---
+title: Button
+description: Displays a button or a component that looks like a button.
+---
+
+<ComponentPreview 
+  id="button-variants"
+  code={`import { Button } from "@thecodinghqs/ui"
+
+export function ButtonDemo() {
+  return (
+    <div className="flex flex-wrap gap-4">
+      <Button variant="default">Default</Button>
+      <Button variant="outline">Outline</Button>
+      <Button variant="destructive">Destructive</Button>
+      <Button variant="ghost">Ghost</Button>
+      <Button variant="link">Link</Button>
+      <Button isLoading>Loading</Button>
+    </div>
+  )
+}`}
+/>
+
+## Props
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `variant` | `"default" \| "destructive" \| "outline" \| "ghost" \| "link"` | `"default"` | Visual style of button. |
+| `size` | `"sm" \| "md" \| "lg" \| "icon"` | `"md"` | Size dimensions of the button. |
+| `isLoading` | `boolean` | `false` | If true, disables interaction and shows a spinner. |
+| `leftIcon` | `ReactNode` | - | Element to insert before children. |
+| `rightIcon` | `ReactNode` | - | Element to insert after children. |
+| `asChild` | `boolean` | `false` | Merge props onto immediate child (like `<Link>`). |

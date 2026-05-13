@@ -1,0 +1,38 @@
+---
+title: Context Menu
+description: Displays a menu to users — typically triggered by a button — that appears to overlap context.
+---
+
+<ComponentPreview 
+  id="context-menu-basic"
+  code={`import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuItem,
+  ContextMenuSeparator,
+  ContextMenuTrigger,
+} from "@thecodinghqs/ui"
+
+export function ContextMenuDemo() {
+  return (
+    <ContextMenu>
+      <ContextMenuTrigger className="border rounded p-8">
+        Right click here
+      </ContextMenuTrigger>
+      <ContextMenuContent>
+        <ContextMenuItem>Back</ContextMenuItem>
+        <ContextMenuSeparator />
+        <ContextMenuItem>Reload</ContextMenuItem>
+      </ContextMenuContent>
+    </ContextMenu>
+  )
+}`}
+/>
+
+## Structure
+
+- `ContextMenu`: Container
+- `ContextMenuTrigger`: Element to right-click
+- `ContextMenuContent`: Floating container
+- `ContextMenuItem`: Selectable button item
+- `ContextMenuSeparator`: Visually group items

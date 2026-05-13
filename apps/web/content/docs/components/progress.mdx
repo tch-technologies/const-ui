@@ -1,0 +1,29 @@
+---
+title: Progress
+description: Displays an indicator showing the completion progress of a task, typically displayed as a progress bar, circle, or incremental boxes.
+---
+
+<ComponentPreview 
+  id="progress-variants"
+  code={`import { Progress } from "@thecodinghqs/ui"
+
+export function ProgressDemo() {
+  return (
+    <div className="flex flex-col gap-6">
+      <Progress value={60} variant="bar" />
+      <Progress value={60} variant="circle" />
+      <Progress value={60} variant="box" boxCount={10} />
+    </div>
+  )
+}`}
+/>
+
+## Props
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `value` | `number` | `0` | Number from 0-100 representing status. |
+| `variant` | `"bar" \| "circle" \| "box"` | `"bar"` | Render style for component. |
+| `circleSize` | `number` | `64` | Diameter in px (circle only). |
+| `circleStrokeWidth` | `number` | `8` | Stroke width in px (circle only). |
+| `boxCount` | `number` | `10` | Count of blocks to render (box only). |

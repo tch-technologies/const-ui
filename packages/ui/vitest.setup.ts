@@ -1,15 +1,15 @@
 import '@testing-library/jest-dom'
 
 // Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
+globalThis.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
   disconnect() {}
 }
 
 // Mock PointerEvent
-if (typeof global.PointerEvent === 'undefined') {
-  global.PointerEvent = class PointerEvent extends Event {
+if (typeof globalThis.PointerEvent === 'undefined') {
+  globalThis.PointerEvent = class PointerEvent extends Event {
     pointerId: number
     constructor(type: string, params: any = {}) {
       super(type, params)
@@ -19,8 +19,8 @@ if (typeof global.PointerEvent === 'undefined') {
 }
 
 // Mock DOMRect
-if (typeof global.DOMRect === 'undefined') {
-  global.DOMRect = class DOMRect {
+if (typeof globalThis.DOMRect === 'undefined') {
+  globalThis.DOMRect = class DOMRect {
     bottom = 0
     left = 0
     right = 0

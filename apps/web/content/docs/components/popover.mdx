@@ -1,0 +1,27 @@
+---
+title: Popover
+description: Displays rich content in a portal, triggered by a button.
+---
+
+<ComponentPreview 
+  id="popover-basic"
+  code={`import { Popover, PopoverContent, PopoverTrigger } from "@thecodinghqs/ui"
+
+export function PopoverDemo() {
+  return (
+    <Popover>
+      <PopoverTrigger>Click me</PopoverTrigger>
+      <PopoverContent>
+        Place content for the popover here.
+      </PopoverContent>
+    </Popover>
+  )
+}`}
+/>
+
+## Props
+
+| Component | Prop | Type | Description |
+| :--- | :--- | :--- | :--- |
+| `PopoverContent` | `align` | `"start" \| "center" \| "end"` | Alignment relative to anchor. |
+| `PopoverContent` | `sideOffset` | `number` | Spacing from trigger. |

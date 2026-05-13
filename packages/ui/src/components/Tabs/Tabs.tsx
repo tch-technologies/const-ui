@@ -13,6 +13,7 @@ const tabsListVariants = cva(
       variant: {
         default: 'bg-muted',
         underline: 'bg-transparent border-b rounded-none p-0 w-full justify-start',
+        curved: 'bg-transparent p-0 w-full justify-start gap-0 border-b-0 items-end',
       },
     },
     defaultVariants: {
@@ -42,6 +43,8 @@ const tabsTriggerVariants = cva(
           'rounded-md data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm',
         underline:
           'border-b-2 border-transparent px-4 py-2 data-[state=active]:border-primary data-[state=active]:text-foreground rounded-none bg-transparent',
+        curved:
+          'px-6 py-3 rounded-none bg-transparent relative tabs-trigger-curved',
       },
     },
     defaultVariants: {

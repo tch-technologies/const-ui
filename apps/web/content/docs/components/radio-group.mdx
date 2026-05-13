@@ -1,0 +1,34 @@
+---
+title: Radio Group
+description: A set of checkable buttons known as radio buttons, where no more than one of the buttons can be checked at a time.
+---
+
+<ComponentPreview 
+  id="radio-group-basic"
+  code={`import { RadioGroup, RadioGroupItem, Label } from "@thecodinghqs/ui"
+
+export function RadioGroupDemo() {
+  return (
+    <RadioGroup defaultValue="option-one">
+      <div className="flex items-center space-x-2">
+        <RadioGroupItem value="option-one" id="o1" />
+        <Label htmlFor="o1">Option One</Label>
+      </div>
+      <div className="flex items-center space-x-2">
+        <RadioGroupItem value="option-two" id="o2" />
+        <Label htmlFor="o2">Option Two</Label>
+      </div>
+    </RadioGroup>
+  )
+}`}
+/>
+
+## Props
+
+### RadioGroup
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `defaultValue` | `string` | - | Initial selected radio state. |
+| `value` | `string` | - | Controlled active state value. |
+| `onValueChange` | `(v: string) => void` | - | Event emitted on check change. |

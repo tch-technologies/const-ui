@@ -1,0 +1,27 @@
+---
+title: Switch
+description: A control that allows the user to toggle between checked and not checked.
+---
+
+<ComponentPreview 
+  id="switch-basic"
+  code={`import { Switch, Label } from "@thecodinghqs/ui"
+
+export function SwitchDemo() {
+  return (
+    <div className="flex items-center space-x-2">
+      <Switch id="airplane-mode" />
+      <Label htmlFor="airplane-mode">Airplane Mode</Label>
+    </div>
+  )
+}`}
+/>
+
+## Props
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `checked` | `boolean` | - | Controlled boolean state. |
+| `defaultChecked` | `boolean` | `false` | Initial value when uncontrolled. |
+| `onCheckedChange` | `(checked: boolean) => void` | - | Event fired on state flip. |
+| `disabled` | `boolean` | `false` | When true, interaction becomes inert. |

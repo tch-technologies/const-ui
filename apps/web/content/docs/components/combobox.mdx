@@ -1,0 +1,37 @@
+---
+title: Combobox
+description: Autocomplete input and select with a command menu.
+---
+
+<ComponentPreview 
+  id="combobox-basic"
+  code={`import { Combobox } from "@thecodinghqs/ui"
+import * as React from "react"
+
+const options = [
+  { value: "next.js", label: "Next.js" },
+  { value: "sveltekit", label: "SvelteKit" },
+]
+
+export function ComboboxDemo() {
+  const [value, setValue] = React.useState("")
+  return (
+    <Combobox
+      options={options}
+      value={value}
+      onChange={setValue}
+      placeholder="Select framework..."
+    />
+  )
+}`}
+/>
+
+## Props
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `options` | `Array<{value: string, label: string}>` | `[]` | Items available in list. |
+| `value` | `string` | - | Current selected value. |
+| `onChange` | `(value: string) => void` | - | Selection callback. |
+| `placeholder` | `string` | `"Select..."` | Display text when value empty. |
+| `emptyText` | `string` | `"No item found."` | Displayed when search filters everything. |

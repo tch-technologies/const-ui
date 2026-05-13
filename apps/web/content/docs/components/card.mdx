@@ -1,0 +1,43 @@
+---
+title: Card
+description: Displays a card with header, content, and footer.
+---
+
+<ComponentPreview 
+  id="card-basic"
+  code={`import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@thecodinghqs/ui"
+
+export function CardDemo() {
+  return (
+    <Card className="w-[350px]">
+      <CardHeader>
+        <CardTitle>Create project</CardTitle>
+        <CardDescription>Deploy your new project in one-click.</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p>Card content goes here.</p>
+      </CardContent>
+      <CardFooter className="flex justify-between">
+        <Button variant="outline">Cancel</Button>
+        <Button>Deploy</Button>
+      </CardFooter>
+    </Card>
+  )
+}`}
+/>
+
+## Structure
+
+- `Card`: The wrapper component.
+- `CardHeader`: Contains the title and description.
+- `CardTitle`: A level 3 heading for the card title.
+- `CardDescription`: Subtext positioned below title.
+- `CardContent`: Main container for card body.
+- `CardFooter`: Contains actions positioned at bottom.

@@ -1,0 +1,61 @@
+---
+title: Tabs
+description: A set of layered sections of content—known as tab panels—that are displayed one at a time.
+---
+
+<ComponentPreview 
+  id="tabs-basic"
+  code={`import { Tabs, TabsContent, TabsList, TabsTrigger } from "@thecodinghqs/ui"
+
+export function TabsDemo() {
+  return (
+    <Tabs defaultValue="account" className="w-[400px]">
+      <TabsList className="grid w-full grid-cols-2">
+        <TabsTrigger value="account">Account</TabsTrigger>
+        <TabsTrigger value="password">Password</TabsTrigger>
+      </TabsList>
+      <TabsContent value="account">Manage account stuff.</TabsContent>
+      <TabsContent value="password">Manage password stuff.</TabsContent>
+    </Tabs>
+  )
+}`}
+/>
+
+## Curved Design
+
+Utilize the `curved` variant to create a modern, professional tab set with inverted-radius corners that merge seamlessly into the container below (inspired by browser-tab styling).
+
+<ComponentPreview 
+  id="tabs-curved"
+  code={`import { Tabs, TabsContent, TabsList, TabsTrigger } from "@thecodinghqs/ui"
+import { Home, Sparkles, Users } from "lucide-react"
+
+export function TabsCurvedDemo() {
+  return (
+    <Tabs defaultValue="home">
+      <TabsList variant="curved" className="px-4">
+        <TabsTrigger value="home" variant="curved" className="gap-2">
+          <Home className="h-4 w-4" /> Home
+        </TabsTrigger>
+        <TabsTrigger value="products" variant="curved" className="gap-2">
+          <Sparkles className="h-4 w-4" /> Products
+        </TabsTrigger>
+      </TabsList>
+      <TabsContent value="home" className="tabs-content-curved">
+        Content body seamlessly integrated.
+      </TabsContent>
+    </Tabs>
+  )
+}`}
+/>
+
+## Props
+
+### Tabs
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `defaultValue` | `string` | - | Initial active tab on mount. |
+| `value` | `string` | - | Controlled active tab item. |
+| `onValueChange` | `(value: string) => void` | - | Triggered when selected tab changes. |
+| `orientation` | `"horizontal" \| "vertical"` | `"horizontal"` | Keyboard nav behavior. |

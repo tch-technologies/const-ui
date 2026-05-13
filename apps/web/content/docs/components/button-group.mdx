@@ -1,0 +1,32 @@
+---
+title: Button Group
+description: Group a series of buttons together on a single line.
+---
+
+<ComponentPreview 
+  id="button-group-basic"
+  code={`import { Button, ButtonGroup } from "@thecodinghqs/ui"
+
+export function ButtonGroupDemo() {
+  return (
+    <div className="space-y-4">
+      <ButtonGroup>
+        <Button variant="outline">One</Button>
+        <Button variant="outline">Two</Button>
+        <Button variant="outline">Three</Button>
+      </ButtonGroup>
+
+      <ButtonGroup orientation="vertical">
+        <Button variant="outline">Top</Button>
+        <Button variant="outline">Bottom</Button>
+      </ButtonGroup>
+    </div>
+  )
+}`}
+/>
+
+## Props
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `orientation` | `"horizontal" \| "vertical"` | `"horizontal"` | Sets stack direction. |

@@ -1,0 +1,42 @@
+---
+title: Select
+description: Displays a list of options for the user to pick from—triggered by a button.
+---
+
+<ComponentPreview 
+  id="select-basic"
+  code={`import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@thecodinghqs/ui"
+
+export function SelectDemo() {
+  return (
+    <Select>
+      <SelectTrigger className="w-[180px]">
+        <SelectValue placeholder="Theme" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value="light">Light</SelectItem>
+        <SelectItem value="dark">Dark</SelectItem>
+        <SelectItem value="system">System</SelectItem>
+      </SelectContent>
+    </Select>
+  )
+}`}
+/>
+
+## Props
+
+### Select
+
+Wraps Radix UI Select primitive.
+
+| Prop | Type | Description |
+| :--- | :--- | :--- |
+| `value` | `string` | The controlled selection state. |
+| `defaultValue` | `string` | The default selection value. |
+| `onValueChange` | `(value: string) => void` | Event when state changes. |
