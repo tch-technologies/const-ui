@@ -1,6 +1,6 @@
-"use client"
+'use client'
 
-import * as React from "react"
+import * as React from 'react'
 import {
   Accordion,
   AccordionContent,
@@ -45,23 +45,21 @@ import {
   TabsList,
   TabsTrigger,
   ImageZoom,
-} from "@thecodinghqs/ui"
-import { Home, Sparkles, Users } from "lucide-react"
+} from '@thecodinghqs/ui'
+import { Home, Sparkles, Users } from 'lucide-react'
 
 // Local styled Label since it's not exported from the UI package
-const Label = React.forwardRef<
-  HTMLLabelElement,
-  React.LabelHTMLAttributes<HTMLLabelElement>
->(({ className, ...props }, ref) => (
-  <label
-    ref={ref}
-    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-    style={{ cursor: "pointer" }}
-    {...props}
-  />
-))
-Label.displayName = "Label"
-
+const Label = React.forwardRef<HTMLLabelElement, React.LabelHTMLAttributes<HTMLLabelElement>>(
+  ({ className, ...props }, ref) => (
+    <label
+      ref={ref}
+      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+      style={{ cursor: 'pointer' }}
+      {...props}
+    />
+  ),
+)
+Label.displayName = 'Label'
 
 // ── Accordion ────────────────────────────────────────────────
 function AccordionDemo() {
@@ -69,9 +67,7 @@ function AccordionDemo() {
     <Accordion type="single" collapsible className="w-full max-w-md">
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-        </AccordionContent>
+        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
         <AccordionTrigger>Is it styled?</AccordionTrigger>
@@ -158,13 +154,13 @@ function CardDemo() {
 
 // ── Combobox ─────────────────────────────────────────────────
 function ComboboxDemo() {
-  const [value, setValue] = React.useState("")
+  const [value, setValue] = React.useState('')
   const frameworks = [
-    { value: "next.js", label: "Next.js" },
-    { value: "sveltekit", label: "SvelteKit" },
-    { value: "nuxt.js", label: "Nuxt.js" },
-    { value: "remix", label: "Remix" },
-    { value: "astro", label: "Astro" },
+    { value: 'next.js', label: 'Next.js' },
+    { value: 'sveltekit', label: 'SvelteKit' },
+    { value: 'nuxt.js', label: 'Nuxt.js' },
+    { value: 'remix', label: 'Remix' },
+    { value: 'astro', label: 'Astro' },
   ]
   return (
     <Combobox
@@ -209,9 +205,7 @@ function DialogDemo() {
             Make changes to your profile here. Click save when you&apos;re done.
           </DialogDescription>
         </DialogHeader>
-        <div className="py-4 text-sm text-muted-foreground">
-          Profile form fields would go here.
-        </div>
+        <div className="py-4 text-sm text-muted-foreground">Profile form fields would go here.</div>
         <DialogFooter>
           <Button variant="outline">Cancel</Button>
           <Button>Save changes</Button>
@@ -231,9 +225,7 @@ function PopoverDemo() {
       <PopoverContent className="w-64">
         <div className="space-y-2">
           <h4 className="font-medium leading-none">Dimensions</h4>
-          <p className="text-sm text-muted-foreground">
-            Set the dimensions for the layer.
-          </p>
+          <p className="text-sm text-muted-foreground">Set the dimensions for the layer.</p>
           <div className="grid gap-2 pt-2">
             <div className="flex items-center justify-between">
               <span className="text-sm">Width</span>
@@ -322,9 +314,7 @@ function SwitchDemo() {
         <Switch id="airplane" checked={checked} onCheckedChange={setChecked} />
         <Label htmlFor="airplane">Airplane Mode</Label>
       </div>
-      <span className="text-sm text-muted-foreground">
-        {checked ? "On" : "Off"}
-      </span>
+      <span className="text-sm text-muted-foreground">{checked ? 'On' : 'Off'}</span>
     </div>
   )
 }
@@ -339,15 +329,11 @@ function TabsDemo() {
       </TabsList>
       <TabsContent value="account" className="space-y-2 p-4">
         <p className="text-sm font-medium">Account settings</p>
-        <p className="text-sm text-muted-foreground">
-          Make changes to your account here.
-        </p>
+        <p className="text-sm text-muted-foreground">Make changes to your account here.</p>
       </TabsContent>
       <TabsContent value="password" className="space-y-2 p-4">
         <p className="text-sm font-medium">Password settings</p>
-        <p className="text-sm text-muted-foreground">
-          Change your password here.
-        </p>
+        <p className="text-sm text-muted-foreground">Change your password here.</p>
       </TabsContent>
     </Tabs>
   )
@@ -356,30 +342,30 @@ function TabsDemo() {
 function TabsCurvedDemo() {
   return (
     <div className="w-full max-w-lg p-8 rounded-xl bg-[#f3e8e0] dark:bg-[#1a1614]">
-      <Tabs defaultValue="home" className="w-full">
-        <TabsList variant="curved" className="px-4">
-          <TabsTrigger value="home" variant="curved" className="gap-2">
+      <Tabs defaultValue="home" className="w-full" variant="curved">
+        <TabsList className="px-4">
+          <TabsTrigger value="home" className="gap-2">
             <Home className="h-4 w-4" />
             Home
           </TabsTrigger>
-          <TabsTrigger value="products" variant="curved" className="gap-2">
+          <TabsTrigger value="products" className="gap-2">
             <Sparkles className="h-4 w-4" />
             Products
           </TabsTrigger>
-          <TabsTrigger value="about" variant="curved" className="gap-2">
+          <TabsTrigger value="about" className="gap-2">
             <Users className="h-4 w-4" />
             About
           </TabsTrigger>
         </TabsList>
-        <TabsContent value="home" className="tabs-content-curved">
+        <TabsContent value="home">
           <h3 className="text-xl font-bold mb-2">Home Feed</h3>
           <p className="text-gray-300">Seamless curved inverted corner design ready to use.</p>
         </TabsContent>
-        <TabsContent value="products" className="tabs-content-curved">
+        <TabsContent value="products">
           <h3 className="text-xl font-bold mb-2">All Products</h3>
           <p className="text-gray-300">Viewing catalog grid here.</p>
         </TabsContent>
-        <TabsContent value="about" className="tabs-content-curved">
+        <TabsContent value="about">
           <h3 className="text-xl font-bold mb-2">Our Story</h3>
           <p className="text-gray-300">Founded in 2026 with a mission to create beauty.</p>
         </TabsContent>
@@ -393,9 +379,9 @@ function ImageZoomDemo() {
   return (
     <div className="flex justify-center items-center max-w-sm overflow-hidden rounded-xl border shadow-sm bg-muted/50">
       <ImageZoom>
-        <img 
-          src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=800&auto=format&fit=crop" 
-          alt="A cute fluffy dog lounging gracefully" 
+        <img
+          src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=800&auto=format&fit=crop"
+          alt="A cute fluffy dog lounging gracefully"
           className="w-full h-auto block transition-transform duration-300 hover:scale-105"
         />
       </ImageZoom>
@@ -405,20 +391,20 @@ function ImageZoomDemo() {
 
 // ── Registry ─────────────────────────────────────────────────
 export const previewRegistry: Record<string, React.ComponentType> = {
-  "accordion-basic": AccordionDemo,
-  "badge-variants": BadgeDemo,
-  "button-variants": ButtonDemo,
-  "button-group-basic": ButtonGroupDemo,
-  "card-basic": CardDemo,
-  "combobox-basic": ComboboxDemo,
-  "context-menu-basic": ContextMenuDemo,
-  "dialog-basic": DialogDemo,
-  "popover-basic": PopoverDemo,
-  "progress-variants": ProgressDemo,
-  "radio-group-basic": RadioGroupDemo,
-  "select-basic": SelectDemo,
-  "switch-basic": SwitchDemo,
-  "tabs-basic": TabsDemo,
-  "tabs-curved": TabsCurvedDemo,
-  "image-zoom-basic": ImageZoomDemo,
+  'accordion-basic': AccordionDemo,
+  'badge-variants': BadgeDemo,
+  'button-variants': ButtonDemo,
+  'button-group-basic': ButtonGroupDemo,
+  'card-basic': CardDemo,
+  'combobox-basic': ComboboxDemo,
+  'context-menu-basic': ContextMenuDemo,
+  'dialog-basic': DialogDemo,
+  'popover-basic': PopoverDemo,
+  'progress-variants': ProgressDemo,
+  'radio-group-basic': RadioGroupDemo,
+  'select-basic': SelectDemo,
+  'switch-basic': SwitchDemo,
+  'tabs-basic': TabsDemo,
+  'tabs-curved': TabsCurvedDemo,
+  'image-zoom-basic': ImageZoomDemo,
 }

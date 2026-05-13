@@ -32,16 +32,16 @@ import { Home, Sparkles, Users } from "lucide-react"
 
 export function TabsCurvedDemo() {
   return (
-    <Tabs defaultValue="home">
-      <TabsList variant="curved" className="px-4">
-        <TabsTrigger value="home" variant="curved" className="gap-2">
+    <Tabs defaultValue="home" variant="curved">
+      <TabsList className="px-4">
+        <TabsTrigger value="home" className="gap-2">
           <Home className="h-4 w-4" /> Home
         </TabsTrigger>
-        <TabsTrigger value="products" variant="curved" className="gap-2">
+        <TabsTrigger value="products" className="gap-2">
           <Sparkles className="h-4 w-4" /> Products
         </TabsTrigger>
       </TabsList>
-      <TabsContent value="home" className="tabs-content-curved">
+      <TabsContent value="home">
         Content body seamlessly integrated.
       </TabsContent>
     </Tabs>
