@@ -269,28 +269,23 @@
 .prose-content > * + * { margin-top: 1.25rem; }
 .prose-content h1 {
   font-size: 2rem; font-weight: 700; line-height: 1.2;
-  color: hsl(var(--foreground));
 }
 .prose-content h2 {
   font-size: 1.375rem; font-weight: 600; line-height: 1.3;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid hsl(var(--border));
   margin-top: 2.5rem;
-  color: hsl(var(--foreground));
 }
 .prose-content h3 {
   font-size: 1.125rem; font-weight: 600; margin-top: 2rem;
-  color: hsl(var(--foreground));
 }
 .prose-content p {
   line-height: 1.8;
-  color: hsl(var(--foreground));
 }
 .prose-content ul,
 .prose-content ol {
   padding-left: 1.5rem;
   line-height: 1.8;
-  color: hsl(var(--foreground));
 }
 .prose-content li + li { margin-top: 0.25rem; }
 .prose-content a { color: hsl(var(--primary)); text-underline-offset: 3px; }
@@ -439,101 +434,5 @@ html.dark .theme-icon-moon { opacity: 1; transform: translate(-50%, -50%) rotate
   font-size: 0.875rem;
   line-height: 1.7;
   color: #c9d1d9;
-}
-
-/* ════════════════════════════════════════════════════════════════
-   CURVED TABS (IMAGE REPLICATION)
-   ════════════════════════════════════════════════════════════════ */
-:root {
-  --tab-curved-bg: 222.2 47.4% 11.2%; /* Base dark navy */
-  --tab-corner-radius: 16px;
-}
-
-.dark {
-  --tab-curved-bg: 217.2 32.6% 17.5%;
-}
-
-.tabs-trigger-curved {
-  position: relative;
-  background: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem !important;
-  height: 3rem;
-  color: hsl(var(--foreground) / 0.7);
-  font-weight: 500;
-  font-size: 0.875rem;
-  transition: all 0.2s ease;
-}
-
-.tabs-trigger-curved:hover {
-  color: hsl(var(--foreground));
-}
-
-.tabs-trigger-curved[data-state="active"] {
-  background: hsl(var(--tab-curved-bg)) !important;
-  color: #ffffff !important; /* Force white for better legibility */
-  border-top-left-radius: var(--tab-corner-radius) !important;
-  border-top-right-radius: var(--tab-corner-radius) !important;
-  z-index: 10;
-}
-
-/* Left inverted corner */
-.tabs-trigger-curved[data-state="active"]::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: calc(-1 * var(--tab-corner-radius));
-  width: var(--tab-corner-radius);
-  height: var(--tab-corner-radius);
-  background: radial-gradient(
-    circle at top left,
-    transparent var(--tab-corner-radius),
-    hsl(var(--tab-curved-bg)) calc(var(--tab-corner-radius) + 0.5px)
-  );
-  pointer-events: none;
-}
-
-/* Right inverted corner */
-.tabs-trigger-curved[data-state="active"]::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: calc(-1 * var(--tab-corner-radius));
-  width: var(--tab-corner-radius);
-  height: var(--tab-corner-radius);
-  background: radial-gradient(
-    circle at top right,
-    transparent var(--tab-corner-radius),
-    hsl(var(--tab-curved-bg)) calc(var(--tab-corner-radius) + 0.5px)
-  );
-  pointer-events: none;
-}
-
-/* Force proper icon alignment */
-.tabs-trigger-curved svg {
-  width: 1rem;
-  height: 1rem;
-  flex-shrink: 0;
-}
-
-/* Content Area Strip */
-.tabs-content-curved {
-  background: hsl(var(--tab-curved-bg)) !important;
-  color: rgba(255, 255, 255, 0.9) !important;
-  margin-top: -0.25rem !important; /* Overlap slightly to cover the hairline gap */
-  border-radius: 12px !important;
-  padding: 2rem !important;
-  min-height: 100px;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-.tabs-content-curved h3 {
-  color: #ffffff;
 }
 

@@ -359,15 +359,15 @@ function TabsCurvedDemo() {
         </TabsList>
         <TabsContent value="home">
           <h3 className="text-xl font-bold mb-2">Home Feed</h3>
-          <p className="text-gray-300">Seamless curved inverted corner design ready to use.</p>
+          <p>Seamless curved inverted corner design ready to use.</p>
         </TabsContent>
         <TabsContent value="products">
           <h3 className="text-xl font-bold mb-2">All Products</h3>
-          <p className="text-gray-300">Viewing catalog grid here.</p>
+          <p>Viewing catalog grid here.</p>
         </TabsContent>
         <TabsContent value="about">
           <h3 className="text-xl font-bold mb-2">Our Story</h3>
-          <p className="text-gray-300">Founded in 2026 with a mission to create beauty.</p>
+          <p>Founded in 2026 with a mission to create beauty.</p>
         </TabsContent>
       </Tabs>
     </div>
