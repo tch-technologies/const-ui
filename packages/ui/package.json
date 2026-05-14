@@ -22,9 +22,9 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup && node -e \"const fs = require('fs'); ['dist/index.js', 'dist/index.mjs'].forEach(f => { const content = fs.readFileSync(f, 'utf8'); fs.writeFileSync(f, '\\\"use client\\\";\\n' + content); })\"",
+    "build": "pnpm exec tsup && node -e \"const fs = require('fs'); ['dist/index.js', 'dist/index.mjs'].forEach(f => { const content = fs.readFileSync(f, 'utf8'); fs.writeFileSync(f, '\\\"use client\\\";\\n' + content); })\"",
     "prepublishOnly": "pnpm build",
-    "dev": "tsup --watch",
+    "dev": "pnpm exec tsup --watch",
     "lint": "eslint src/",
     "test": "vitest run",
     "test:watch": "vitest",
