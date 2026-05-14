@@ -339,6 +339,61 @@ function TabsDemo() {
   )
 }
 
+function TabsNestedDemo() {
+  return (
+    <Tabs
+      defaultValue="row1-account"
+      variant="underline"
+      className="w-full max-w-xl border rounded-lg p-2"
+    >
+      <TabsList className="grid w-full grid-cols-4">
+        <TabsTrigger value="row1-account">Account</TabsTrigger>
+        <TabsTrigger value="row1-password">Password</TabsTrigger>
+        <TabsTrigger value="row1-account1">Account 1</TabsTrigger>
+        <TabsTrigger value="row1-password1">Password 1</TabsTrigger>
+      </TabsList>
+
+      <TabsContent value="row1-account" className="p-0">
+        <Tabs defaultValue="row2-account" variant="underline" className="w-full">
+          <TabsList className="grid w-full grid-cols-4">
+            <TabsTrigger value="row2-account">Account</TabsTrigger>
+            <TabsTrigger value="row2-password">Password</TabsTrigger>
+          </TabsList>
+          <TabsContent value="row2-account" className="space-y-2 p-4 pt-6">
+            <h4 className="text-base font-semibold">Account settings</h4>
+            <p className="text-sm text-muted-foreground">Make changes to your account here.</p>
+          </TabsContent>
+          <TabsContent value="row2-password" className="space-y-2 p-4 pt-6">
+            <h4 className="text-base font-semibold">Account Security</h4>
+            <p className="text-sm text-muted-foreground">Modify secure level 2 tokens here.</p>
+          </TabsContent>
+        </Tabs>
+      </TabsContent>
+
+      <TabsContent
+        value="row1-password"
+        className="p-8 text-center text-sm text-muted-foreground border-t mt-2"
+      >
+        Outer "Password" tab is active. The nested sub-menu is hidden!
+      </TabsContent>
+
+      <TabsContent
+        value="row1-account1"
+        className="p-8 text-center text-sm text-muted-foreground border-t mt-2"
+      >
+        Outer "Account 1" tab is active. The nested sub-menu is hidden!
+      </TabsContent>
+
+      <TabsContent
+        value="row1-password1"
+        className="p-8 text-center text-sm text-muted-foreground border-t mt-2"
+      >
+        Outer "Password 1" tab is active. The nested sub-menu is hidden!
+      </TabsContent>
+    </Tabs>
+  )
+}
+
 function TabsCurvedDemo() {
   return (
     <div className="w-full max-w-lg p-8 rounded-xl bg-[#f3e8e0] dark:bg-[#1a1614]">
@@ -406,6 +461,7 @@ export const previewRegistry: Record<string, React.ComponentType> = {
   'switch-basic': SwitchDemo,
   'tabs-basic': TabsDemo,
   'tabs-curved': TabsCurvedDemo,
+  'tabs-nested': TabsNestedDemo,
   'image-zoom-basic': ImageZoomDemo,
 }
 
@@ -741,6 +797,51 @@ export function ImageZoomDemo() {
         />
       </ImageZoom>
     </div>
+  )
+}`,
+  'tabs-nested': `import { Tabs, TabsContent, TabsList, TabsTrigger } from "@const-ui/react"
+
+export function TabsNestedDemo() {
+  return (
+    <Tabs defaultValue="row1-account" variant="underline" className="w-full max-w-xl border rounded-lg p-2">
+      {/* Level 1: Root Tab Navigation */}
+      <TabsList className="grid w-full grid-cols-4">
+        <TabsTrigger value="row1-account">Account</TabsTrigger>
+        <TabsTrigger value="row1-password">Password</TabsTrigger>
+        <TabsTrigger value="row1-account1">Account 1</TabsTrigger>
+        <TabsTrigger value="row1-password1">Password 1</TabsTrigger>
+      </TabsList>
+
+      {/* Level 2: Tabs isolated inside the first level's "Account" Selection */}
+      <TabsContent value="row1-account" className="p-0">
+        <Tabs defaultValue="row2-account" variant="underline" className="w-full">
+          <TabsList className="grid w-full grid-cols-4">
+            <TabsTrigger value="row2-account">Account</TabsTrigger>
+            <TabsTrigger value="row2-password">Password</TabsTrigger>
+          </TabsList>
+          <TabsContent value="row2-account" className="space-y-2 p-4 pt-6">
+            <h4 className="text-base font-semibold">Account settings</h4>
+            <p className="text-sm text-muted-foreground">Make changes to your account here.</p>
+          </TabsContent>
+          <TabsContent value="row2-password" className="space-y-2 p-4 pt-6">
+            <h4 className="text-base font-semibold">Account Security</h4>
+            <p className="text-sm text-muted-foreground">Modify secure level 2 tokens here.</p>
+          </TabsContent>
+        </Tabs>
+      </TabsContent>
+
+      <TabsContent value="row1-password" className="p-8 text-center text-sm text-muted-foreground border-t mt-2">
+        Outer "Password" tab is active. The nested sub-menu is hidden!
+      </TabsContent>
+      
+      <TabsContent value="row1-account1" className="p-8 text-center text-sm text-muted-foreground border-t mt-2">
+        Outer "Account 1" tab is active. The nested sub-menu is hidden!
+      </TabsContent>
+      
+      <TabsContent value="row1-password1" className="p-8 text-center text-sm text-muted-foreground border-t mt-2">
+        Outer "Password 1" tab is active. The nested sub-menu is hidden!
+      </TabsContent>
+    </Tabs>
   )
 }`,
 }
