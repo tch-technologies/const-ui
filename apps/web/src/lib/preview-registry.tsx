@@ -356,7 +356,7 @@ function TabsNestedDemo() {
 
       <TabsContent value="profile" className="p-0">
         <Tabs defaultValue="profile-general" variant="underline" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 bg-muted/30 p-1 rounded-lg mt-2">
+          <TabsList className="grid w-full grid-cols-3 bg-muted/30 mt-2">
             <TabsTrigger value="profile-general">General</TabsTrigger>
             <TabsTrigger value="profile-social">Socials</TabsTrigger>
             <TabsTrigger value="profile-team">Teams</TabsTrigger>
@@ -385,7 +385,7 @@ function TabsNestedDemo() {
       {/* Nested Configuration Suite inside Security */}
       <TabsContent value="security" className="p-0">
         <Tabs defaultValue="security-mfa" variant="underline" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 bg-muted/30 p-1 rounded-lg mt-2">
+          <TabsList className="grid w-full grid-cols-3 bg-muted/30 mt-2">
             <TabsTrigger value="security-mfa">Two-Factor</TabsTrigger>
             <TabsTrigger value="security-keys">API Keys</TabsTrigger>
             <TabsTrigger value="security-logs">Audit Logs</TabsTrigger>
@@ -853,7 +853,7 @@ export function TabsNestedDemo() {
       {/* Nested Configuration Suite inside Profile */}
       <TabsContent value="profile" className="p-0">
         <Tabs defaultValue="profile-general" variant="underline" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 bg-muted/30 p-1 rounded-lg mt-2">
+          <TabsList className="grid w-full grid-cols-3 bg-muted/30 mt-2">
             <TabsTrigger value="profile-general">General</TabsTrigger>
             <TabsTrigger value="profile-social">Socials</TabsTrigger>
             <TabsTrigger value="profile-team">Teams</TabsTrigger>
@@ -876,7 +876,7 @@ export function TabsNestedDemo() {
       {/* Nested Configuration Suite inside Security */}
       <TabsContent value="security" className="p-0">
         <Tabs defaultValue="security-mfa" variant="underline" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 bg-muted/30 p-1 rounded-lg mt-2">
+          <TabsList className="grid w-full grid-cols-3 bg-muted/30 mt-2">
             <TabsTrigger value="security-mfa">Two-Factor</TabsTrigger>
             <TabsTrigger value="security-keys">API Keys</TabsTrigger>
             <TabsTrigger value="security-logs">Audit Logs</TabsTrigger>
