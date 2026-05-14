@@ -342,53 +342,66 @@ function TabsDemo() {
 function TabsNestedDemo() {
   return (
     <Tabs
-      defaultValue="row1-account"
+      defaultValue="profile"
       variant="underline"
-      className="w-full max-w-xl border rounded-lg p-2"
+      className="w-full max-w-xl border rounded-xl p-4 shadow-sm bg-background"
     >
+      {/* Primary Configuration Groups */}
       <TabsList className="grid w-full grid-cols-4">
-        <TabsTrigger value="row1-account">Account</TabsTrigger>
-        <TabsTrigger value="row1-password">Password</TabsTrigger>
-        <TabsTrigger value="row1-account1">Account 1</TabsTrigger>
-        <TabsTrigger value="row1-password1">Password 1</TabsTrigger>
+        <TabsTrigger value="profile">Profile</TabsTrigger>
+        <TabsTrigger value="security">Security</TabsTrigger>
+        <TabsTrigger value="billing">Billing</TabsTrigger>
+        <TabsTrigger value="notifications">Alerts</TabsTrigger>
       </TabsList>
 
-      <TabsContent value="row1-account" className="p-0">
-        <Tabs defaultValue="row2-account" variant="underline" className="w-full">
-          <TabsList className="grid w-full grid-cols-4">
-            <TabsTrigger value="row2-account">Account</TabsTrigger>
-            <TabsTrigger value="row2-password">Password</TabsTrigger>
+      <TabsContent value="profile" className="p-6 space-y-2 border-t mt-2">
+        <h4 className="text-base font-semibold">Public Profile</h4>
+        <p className="text-sm text-muted-foreground">
+          Manage your public display name, avatar, and bio details here.
+        </p>
+      </TabsContent>
+
+      {/* Nested Configuration Suite inside Security */}
+      <TabsContent value="security" className="p-0">
+        <Tabs defaultValue="security-mfa" variant="underline" className="w-full">
+          <TabsList className="grid w-full grid-cols-3 bg-muted/30 p-1 rounded-lg mt-2">
+            <TabsTrigger value="security-mfa">Two-Factor</TabsTrigger>
+            <TabsTrigger value="security-keys">API Keys</TabsTrigger>
+            <TabsTrigger value="security-logs">Audit Logs</TabsTrigger>
           </TabsList>
-          <TabsContent value="row2-account" className="space-y-2 p-4 pt-6">
-            <h4 className="text-base font-semibold">Account settings</h4>
-            <p className="text-sm text-muted-foreground">Make changes to your account here.</p>
+          <TabsContent value="security-mfa" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">Multi-Factor Authentication</h4>
+            <p className="text-sm text-muted-foreground">
+              Secure your account by requiring an additional OTP token upon login.
+            </p>
           </TabsContent>
-          <TabsContent value="row2-password" className="space-y-2 p-4 pt-6">
-            <h4 className="text-base font-semibold">Account Security</h4>
-            <p className="text-sm text-muted-foreground">Modify secure level 2 tokens here.</p>
+          <TabsContent value="security-keys" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">API Integrations</h4>
+            <p className="text-sm text-muted-foreground">
+              Generate secure client tokens to connect external microservices to the API.
+            </p>
+          </TabsContent>
+          <TabsContent value="security-logs" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">Security Footprint</h4>
+            <p className="text-sm text-muted-foreground">
+              Review all IP locations, active browser sessions, and login history timestamps.
+            </p>
           </TabsContent>
         </Tabs>
       </TabsContent>
 
-      <TabsContent
-        value="row1-password"
-        className="p-8 text-center text-sm text-muted-foreground border-t mt-2"
-      >
-        Outer "Password" tab is active. The nested sub-menu is hidden!
+      <TabsContent value="billing" className="p-6 space-y-2 border-t mt-2">
+        <h4 className="text-base font-semibold">Subscriptions & Payments</h4>
+        <p className="text-sm text-muted-foreground">
+          Update your corporate credit cards, download invoices, or upgrade tiers.
+        </p>
       </TabsContent>
 
-      <TabsContent
-        value="row1-account1"
-        className="p-8 text-center text-sm text-muted-foreground border-t mt-2"
-      >
-        Outer "Account 1" tab is active. The nested sub-menu is hidden!
-      </TabsContent>
-
-      <TabsContent
-        value="row1-password1"
-        className="p-8 text-center text-sm text-muted-foreground border-t mt-2"
-      >
-        Outer "Password 1" tab is active. The nested sub-menu is hidden!
+      <TabsContent value="notifications" className="p-6 space-y-2 border-t mt-2">
+        <h4 className="text-base font-semibold">Email Preferences</h4>
+        <p className="text-sm text-muted-foreground">
+          Control which system events trigger automated webhooks or push notifications.
+        </p>
       </TabsContent>
     </Tabs>
   )
@@ -803,43 +816,61 @@ export function ImageZoomDemo() {
 
 export function TabsNestedDemo() {
   return (
-    <Tabs defaultValue="row1-account" variant="underline" className="w-full max-w-xl border rounded-lg p-2">
-      {/* Level 1: Root Tab Navigation */}
+    <Tabs
+      defaultValue="profile"
+      variant="underline"
+      className="w-full max-w-xl border rounded-xl p-4 shadow-sm bg-background"
+    >
+      {/* Primary Configuration Groups */}
       <TabsList className="grid w-full grid-cols-4">
-        <TabsTrigger value="row1-account">Account</TabsTrigger>
-        <TabsTrigger value="row1-password">Password</TabsTrigger>
-        <TabsTrigger value="row1-account1">Account 1</TabsTrigger>
-        <TabsTrigger value="row1-password1">Password 1</TabsTrigger>
+        <TabsTrigger value="profile">Profile</TabsTrigger>
+        <TabsTrigger value="security">Security</TabsTrigger>
+        <TabsTrigger value="billing">Billing</TabsTrigger>
+        <TabsTrigger value="notifications">Alerts</TabsTrigger>
       </TabsList>
 
-      {/* Level 2: Tabs isolated inside the first level's "Account" Selection */}
-      <TabsContent value="row1-account" className="p-0">
-        <Tabs defaultValue="row2-account" variant="underline" className="w-full">
-          <TabsList className="grid w-full grid-cols-4">
-            <TabsTrigger value="row2-account">Account</TabsTrigger>
-            <TabsTrigger value="row2-password">Password</TabsTrigger>
+      <TabsContent value="profile" className="p-6 space-y-2 border-t mt-2">
+        <h4 className="text-base font-semibold">Public Profile</h4>
+        <p className="text-sm text-muted-foreground">Manage your public display name, avatar, and bio details here.</p>
+      </TabsContent>
+
+      {/* Nested Configuration Suite inside Security */}
+      <TabsContent value="security" className="p-0">
+        <Tabs defaultValue="security-mfa" variant="underline" className="w-full">
+          <TabsList className="grid w-full grid-cols-3 bg-muted/30 p-1 rounded-lg mt-2">
+            <TabsTrigger value="security-mfa">Two-Factor</TabsTrigger>
+            <TabsTrigger value="security-keys">API Keys</TabsTrigger>
+            <TabsTrigger value="security-logs">Audit Logs</TabsTrigger>
           </TabsList>
-          <TabsContent value="row2-account" className="space-y-2 p-4 pt-6">
-            <h4 className="text-base font-semibold">Account settings</h4>
-            <p className="text-sm text-muted-foreground">Make changes to your account here.</p>
+          <TabsContent value="security-mfa" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">Multi-Factor Authentication</h4>
+            <p className="text-sm text-muted-foreground">Secure your account by requiring an additional OTP token upon login.</p>
           </TabsContent>
-          <TabsContent value="row2-password" className="space-y-2 p-4 pt-6">
-            <h4 className="text-base font-semibold">Account Security</h4>
-            <p className="text-sm text-muted-foreground">Modify secure level 2 tokens here.</p>
+          <TabsContent value="security-keys" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">API Integrations</h4>
+            <p className="text-sm text-muted-foreground">Generate secure client tokens to connect external microservices to the API.</p>
+          </TabsContent>
+          <TabsContent value="security-logs" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">Security Footprint</h4>
+            <p className="text-sm text-muted-foreground">Review all IP locations, active browser sessions, and login history timestamps.</p>
           </TabsContent>
         </Tabs>
       </TabsContent>
 
-      <TabsContent value="row1-password" className="p-8 text-center text-sm text-muted-foreground border-t mt-2">
-        Outer "Password" tab is active. The nested sub-menu is hidden!
+      <TabsContent
+        value="billing"
+        className="p-6 space-y-2 border-t mt-2"
+      >
+        <h4 className="text-base font-semibold">Subscriptions & Payments</h4>
+        <p className="text-sm text-muted-foreground">Update your corporate credit cards, download invoices, or upgrade tiers.</p>
       </TabsContent>
-      
-      <TabsContent value="row1-account1" className="p-8 text-center text-sm text-muted-foreground border-t mt-2">
-        Outer "Account 1" tab is active. The nested sub-menu is hidden!
-      </TabsContent>
-      
-      <TabsContent value="row1-password1" className="p-8 text-center text-sm text-muted-foreground border-t mt-2">
-        Outer "Password 1" tab is active. The nested sub-menu is hidden!
+
+      <TabsContent
+        value="notifications"
+        className="p-6 space-y-2 border-t mt-2"
+      >
+        <h4 className="text-base font-semibold">Email Preferences</h4>
+        <p className="text-sm text-muted-foreground">Control which system events trigger automated webhooks or push notifications.</p>
       </TabsContent>
     </Tabs>
   )
