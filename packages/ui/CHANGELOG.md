@@ -1,5 +1,11 @@
 # const-ui
 
+## 0.4.0
+
+### Minor Changes
+
+- feat(tabs): add declarative multi-nested dependent tabs configuration
+
 ## 0.2.0
 
 ### Minor Changes

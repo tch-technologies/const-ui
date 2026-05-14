@@ -354,9 +354,9 @@ function TabsNestedDemo() {
         <TabsTrigger value="notifications">Alerts</TabsTrigger>
       </TabsList>
 
-      <TabsContent value="profile" className="p-0">
+      <TabsContent value="profile" className="p-0 mt-0">
         <Tabs defaultValue="profile-general" variant="underline" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 bg-muted/30 mt-2">
+          <TabsList className="grid w-full grid-cols-3 bg-muted/30">
             <TabsTrigger value="profile-general">General</TabsTrigger>
             <TabsTrigger value="profile-social">Socials</TabsTrigger>
             <TabsTrigger value="profile-team">Teams</TabsTrigger>
@@ -383,9 +383,9 @@ function TabsNestedDemo() {
       </TabsContent>
 
       {/* Nested Configuration Suite inside Security */}
-      <TabsContent value="security" className="p-0">
+      <TabsContent value="security" className="p-0 mt-0">
         <Tabs defaultValue="security-mfa" variant="underline" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 bg-muted/30 mt-2">
+          <TabsList className="grid w-full grid-cols-3 bg-muted/30">
             <TabsTrigger value="security-mfa">Two-Factor</TabsTrigger>
             <TabsTrigger value="security-keys">API Keys</TabsTrigger>
             <TabsTrigger value="security-logs">Audit Logs</TabsTrigger>
@@ -411,14 +411,14 @@ function TabsNestedDemo() {
         </Tabs>
       </TabsContent>
 
-      <TabsContent value="billing" className="p-6 space-y-2 border-t mt-2">
+      <TabsContent value="billing" className="p-6 space-y-2 border-t">
         <h4 className="text-base font-semibold">Subscriptions & Payments</h4>
         <p className="text-sm text-muted-foreground">
           Update your corporate credit cards, download invoices, or upgrade tiers.
         </p>
       </TabsContent>
 
-      <TabsContent value="notifications" className="p-6 space-y-2 border-t mt-2">
+      <TabsContent value="notifications" className="p-6 space-y-2 border-t">
         <h4 className="text-base font-semibold">Email Preferences</h4>
         <p className="text-sm text-muted-foreground">
           Control which system events trigger automated webhooks or push notifications.
@@ -851,9 +851,9 @@ export function TabsNestedDemo() {
       </TabsList>
 
       {/* Nested Configuration Suite inside Profile */}
-      <TabsContent value="profile" className="p-0">
+      <TabsContent value="profile" className="p-0 mt-0">
         <Tabs defaultValue="profile-general" variant="underline" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 bg-muted/30 mt-2">
+          <TabsList className="grid w-full grid-cols-3 bg-muted/30">
             <TabsTrigger value="profile-general">General</TabsTrigger>
             <TabsTrigger value="profile-social">Socials</TabsTrigger>
             <TabsTrigger value="profile-team">Teams</TabsTrigger>
@@ -874,9 +874,9 @@ export function TabsNestedDemo() {
       </TabsContent>
 
       {/* Nested Configuration Suite inside Security */}
-      <TabsContent value="security" className="p-0">
+      <TabsContent value="security" className="p-0 mt-0">
         <Tabs defaultValue="security-mfa" variant="underline" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 bg-muted/30 mt-2">
+          <TabsList className="grid w-full grid-cols-3 bg-muted/30">
             <TabsTrigger value="security-mfa">Two-Factor</TabsTrigger>
             <TabsTrigger value="security-keys">API Keys</TabsTrigger>
             <TabsTrigger value="security-logs">Audit Logs</TabsTrigger>
@@ -898,7 +898,7 @@ export function TabsNestedDemo() {
 
       <TabsContent
         value="billing"
-        className="p-6 space-y-2 border-t mt-2"
+        className="p-6 space-y-2 border-t"
       >
         <h4 className="text-base font-semibold">Subscriptions & Payments</h4>
         <p className="text-sm text-muted-foreground">Update your corporate credit cards, download invoices, or upgrade tiers.</p>
@@ -906,7 +906,7 @@ export function TabsNestedDemo() {
 
       <TabsContent
         value="notifications"
-        className="p-6 space-y-2 border-t mt-2"
+        className="p-6 space-y-2 border-t"
       >
         <h4 className="text-base font-semibold">Email Preferences</h4>
         <p className="text-sm text-muted-foreground">Control which system events trigger automated webhooks or push notifications.</p>
