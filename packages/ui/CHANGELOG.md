@@ -1,4 +1,4 @@
-# @const/ui
+# const-ui
 
 ## 0.2.0
 

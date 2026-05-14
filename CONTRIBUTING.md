@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in contributing to `@const/ui`!
+Thank you for your interest in contributing to `const-ui`!
 
 ## Setup
 

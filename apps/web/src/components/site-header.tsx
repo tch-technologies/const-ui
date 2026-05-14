@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { Moon, Sun, Github } from 'lucide-react'
-import { Button } from '@const/ui'
+import { Button } from '@const-ui/react'
 import { MainNav } from '@/components/main-nav'
 import { MobileNav } from '@/components/mobile-nav'
 import { CommandMenu } from '@/components/command-menu'

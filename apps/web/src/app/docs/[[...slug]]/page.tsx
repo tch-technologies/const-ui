@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug?: st
   const doc = getDocBySlug(slugPath)
   if (!doc) return {}
   return {
-    title: `${doc.meta.title} | TheCodingHQs UI`,
+    title: `${doc.meta.title} | Const UI`,
     description: doc.meta.description ?? '',
   }
 }

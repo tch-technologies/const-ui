@@ -3,7 +3,7 @@
 import * as React from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
-import { Button } from '@const/ui'
+import { Button } from '@const-ui/react'
 import { Sidebar } from './sidebar'
 
 export function MobileNav() {
@@ -24,7 +24,7 @@ export function MobileNav() {
 
   return (
     <>
-      {/* Hamburger â€” hidden on desktop via .mobile-hamburger CSS class */}
+      {/* Hamburger ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â hidden on desktop via .mobile-hamburger CSS class */}
       <div className="mobile-hamburger">
         <Button
           variant="ghost"

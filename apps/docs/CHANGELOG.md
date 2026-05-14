@@ -5,21 +5,21 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @const/ui@0.2.0
+  - const-ui@0.2.0
 
 ## 0.0.4
 
 ### Patch Changes
 
 - Updated dependencies
-  - @const/ui@0.1.4
+  - const-ui@0.1.4
 
 ## 0.0.3
 
 ### Patch Changes
 
 - Updated dependencies
-  - @const/ui@0.1.3
+  - const-ui@0.1.3
 
 ## 0.0.2
 
@@ -27,11 +27,11 @@
 
 - Updated dependencies
 - Updated dependencies [61d4430]
-  - @const/ui@0.1.2
+  - const-ui@0.1.2
 
 ## 0.0.1
 
 ### Patch Changes
 
 - Updated dependencies
-  - @const/ui@0.1.1
+  - const-ui@0.1.1

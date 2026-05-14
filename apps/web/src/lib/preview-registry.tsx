@@ -45,7 +45,7 @@ import {
   TabsList,
   TabsTrigger,
   ImageZoom,
-} from '@const/ui'
+} from '@const-ui/react'
 import { Home, Sparkles, Users } from 'lucide-react'
 
 // Local styled Label since it's not exported from the UI package
@@ -61,7 +61,7 @@ const Label = React.forwardRef<HTMLLabelElement, React.LabelHTMLAttributes<HTMLL
 )
 Label.displayName = 'Label'
 
-// â”€â”€ Accordion â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// -- Accordion --
 function AccordionDemo() {
   return (
     <Accordion type="single" collapsible className="w-full max-w-md">
@@ -85,7 +85,7 @@ function AccordionDemo() {
   )
 }
 
-// â”€â”€ Badge â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// -- Badge --
 function BadgeDemo() {
   return (
     <div className="flex flex-wrap gap-3">
@@ -97,7 +97,7 @@ function BadgeDemo() {
   )
 }
 
-// â”€â”€ Button â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// -- Button --
 function ButtonDemo() {
   return (
     <div className="flex flex-wrap items-center gap-3">
@@ -113,7 +113,7 @@ function ButtonDemo() {
   )
 }
 
-// â”€â”€ ButtonGroup â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// -- ButtonGroup --
 function ButtonGroupDemo() {
   return (
     <div className="flex flex-col gap-4">
@@ -131,7 +131,7 @@ function ButtonGroupDemo() {
   )
 }
 
-// â”€â”€ Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// -- Card --
 function CardDemo() {
   return (
     <Card className="w-full max-w-sm">
@@ -152,7 +152,7 @@ function CardDemo() {
   )
 }
 
-// â”€â”€ Combobox â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// -- Combobox --
 function ComboboxDemo() {
   const [value, setValue] = React.useState('')
   const frameworks = [
@@ -172,7 +172,7 @@ function ComboboxDemo() {
   )
 }
 
-// â”€â”€ ContextMenu â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// -- ContextMenu --
 function ContextMenuDemo() {
   return (
     <ContextMenu>
@@ -191,7 +191,7 @@ function ContextMenuDemo() {
   )
 }
 
-// â”€â”€ Dialog â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// -- Dialog --
 function DialogDemo() {
   return (
     <Dialog>
@@ -215,7 +215,7 @@ function DialogDemo() {
   )
 }
 
-// â”€â”€ Popover â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// -- Popover --
 function PopoverDemo() {
   return (
     <Popover>
@@ -242,7 +242,7 @@ function PopoverDemo() {
   )
 }
 
-// â”€â”€ Progress â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// -- Progress --
 function ProgressDemo() {
   const [value, setValue] = React.useState(60)
   React.useEffect(() => {
@@ -267,7 +267,7 @@ function ProgressDemo() {
   )
 }
 
-// â”€â”€ RadioGroup â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// -- RadioGroup --
 function RadioGroupDemo() {
   return (
     <RadioGroup defaultValue="comfortable">
@@ -287,7 +287,7 @@ function RadioGroupDemo() {
   )
 }
 
-// â”€â”€ Select â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// -- Select --
 function SelectDemo() {
   return (
     <Select>
@@ -305,7 +305,7 @@ function SelectDemo() {
   )
 }
 
-// â”€â”€ Switch â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// -- Switch --
 function SwitchDemo() {
   const [checked, setChecked] = React.useState(false)
   return (
@@ -319,7 +319,7 @@ function SwitchDemo() {
   )
 }
 
-// â”€â”€ Tabs â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// -- Tabs --
 function TabsDemo() {
   return (
     <Tabs defaultValue="account" className="w-full max-w-md">
@@ -374,7 +374,7 @@ function TabsCurvedDemo() {
   )
 }
 
-// â”€â”€ ImageZoom â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// -- ImageZoom --
 function ImageZoomDemo() {
   return (
     <div className="flex justify-center items-center max-w-sm overflow-hidden rounded-xl border shadow-sm bg-muted/50">
@@ -389,7 +389,7 @@ function ImageZoomDemo() {
   )
 }
 
-// â”€â”€ Registry â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// -- Registry --
 export const previewRegistry: Record<string, React.ComponentType> = {
   'accordion-basic': AccordionDemo,
   'badge-variants': BadgeDemo,

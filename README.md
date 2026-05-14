@@ -1,25 +1,25 @@
-# @const/ui
+# const-ui
 
 A production-ready React UI component library.
 
-[![npm version](https://img.shields.io/npm/v/@const/ui.svg?style=flat-square)](https://www.npmjs.com/package/@const/ui)
-[![license](https://img.shields.io/npm/l/@const/ui.svg?style=flat-square)](https://github.com/your-username/my-ui-lib-monorepo/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/const-ui.svg?style=flat-square)](https://www.npmjs.com/package/const-ui)
+[![license](https://img.shields.io/npm/l/const-ui.svg?style=flat-square)](https://github.com/your-username/my-ui-lib-monorepo/blob/main/LICENSE)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/your-username/my-ui-lib-monorepo/ci.yml?branch=main&style=flat-square)](https://github.com/your-username/my-ui-lib-monorepo/actions)
 
 ## Installation
 
 ```bash
-npm install @const/ui
+npm install const-ui
 # or
-pnpm add @const/ui
+pnpm add const-ui
 # or
-yarn add @const/ui
+yarn add const-ui
 ```
 
 ## Usage
 
 ```tsx
-import { Button } from '@const/ui'
+import { Button } from 'const-ui'
 
 export default function App() {
   return (

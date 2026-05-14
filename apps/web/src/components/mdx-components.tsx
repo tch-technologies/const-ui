@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { cn } from '@const/ui'
+import { cn } from '@/lib/utils'
 import { ComponentPreview } from '@/components/component-preview'
 
 export const MdxComponents = {

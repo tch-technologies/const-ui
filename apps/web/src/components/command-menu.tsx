@@ -4,7 +4,7 @@ import * as React from 'react'
 import { useRouter } from 'next/navigation'
 import { Search } from 'lucide-react'
 
-import { Dialog, DialogContent, DialogTrigger } from '@const/ui'
+import { Dialog, DialogContent, DialogTrigger } from '@const-ui/react'
 import {
   Command,
   CommandEmpty,
@@ -12,8 +12,8 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from '@const/ui'
-import { Button } from '@const/ui'
+} from '@const-ui/react'
+import { Button } from '@const-ui/react'
 import { docsConfig } from '@/config/docs'
 
 export function CommandMenu() {
@@ -46,7 +46,7 @@ export function CommandMenu() {
           <span className="hidden lg:inline-flex">Search documentation...</span>
           <span className="inline-flex lg:hidden">Search...</span>
           <kbd className="pointer-events-none absolute right-1.5 top-1.5 hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
-            <span className="text-xs">âŒ˜</span>K
+            <span className="text-xs">ÃƒÆ’Ã‚Â¢Ãƒâ€¦Ã¢â‚¬â„¢Ãƒâ€¹Ã…â€œ</span>K
           </kbd>
         </Button>
       </DialogTrigger>
