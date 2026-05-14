@@ -354,11 +354,32 @@ function TabsNestedDemo() {
         <TabsTrigger value="notifications">Alerts</TabsTrigger>
       </TabsList>
 
-      <TabsContent value="profile" className="p-6 space-y-2 border-t mt-2">
-        <h4 className="text-base font-semibold">Public Profile</h4>
-        <p className="text-sm text-muted-foreground">
-          Manage your public display name, avatar, and bio details here.
-        </p>
+      <TabsContent value="profile" className="p-0">
+        <Tabs defaultValue="profile-general" variant="underline" className="w-full">
+          <TabsList className="grid w-full grid-cols-3 bg-muted/30 p-1 rounded-lg mt-2">
+            <TabsTrigger value="profile-general">General</TabsTrigger>
+            <TabsTrigger value="profile-social">Socials</TabsTrigger>
+            <TabsTrigger value="profile-team">Teams</TabsTrigger>
+          </TabsList>
+          <TabsContent value="profile-general" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">Account Info</h4>
+            <p className="text-sm text-muted-foreground">
+              Modify your primary display name, company URL, and timezones.
+            </p>
+          </TabsContent>
+          <TabsContent value="profile-social" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">Connected Profiles</h4>
+            <p className="text-sm text-muted-foreground">
+              Link GitHub, Twitter, or LinkedIn directly to your active public portal.
+            </p>
+          </TabsContent>
+          <TabsContent value="profile-team" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">Organization Seats</h4>
+            <p className="text-sm text-muted-foreground">
+              Assign executive roles, invite developers, and allocate operational permissions.
+            </p>
+          </TabsContent>
+        </Tabs>
       </TabsContent>
 
       {/* Nested Configuration Suite inside Security */}
@@ -829,9 +850,27 @@ export function TabsNestedDemo() {
         <TabsTrigger value="notifications">Alerts</TabsTrigger>
       </TabsList>
 
-      <TabsContent value="profile" className="p-6 space-y-2 border-t mt-2">
-        <h4 className="text-base font-semibold">Public Profile</h4>
-        <p className="text-sm text-muted-foreground">Manage your public display name, avatar, and bio details here.</p>
+      {/* Nested Configuration Suite inside Profile */}
+      <TabsContent value="profile" className="p-0">
+        <Tabs defaultValue="profile-general" variant="underline" className="w-full">
+          <TabsList className="grid w-full grid-cols-3 bg-muted/30 p-1 rounded-lg mt-2">
+            <TabsTrigger value="profile-general">General</TabsTrigger>
+            <TabsTrigger value="profile-social">Socials</TabsTrigger>
+            <TabsTrigger value="profile-team">Teams</TabsTrigger>
+          </TabsList>
+          <TabsContent value="profile-general" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">Account Info</h4>
+            <p className="text-sm text-muted-foreground">Modify your primary display name, company URL, and timezones.</p>
+          </TabsContent>
+          <TabsContent value="profile-social" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">Connected Profiles</h4>
+            <p className="text-sm text-muted-foreground">Link GitHub, Twitter, or LinkedIn directly to your active public portal.</p>
+          </TabsContent>
+          <TabsContent value="profile-team" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">Organization Seats</h4>
+            <p className="text-sm text-muted-foreground">Assign executive roles, invite developers, and allocate operational permissions.</p>
+          </TabsContent>
+        </Tabs>
       </TabsContent>
 
       {/* Nested Configuration Suite inside Security */}
