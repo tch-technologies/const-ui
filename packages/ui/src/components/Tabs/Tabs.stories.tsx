@@ -104,3 +104,93 @@ export const Disabled: Story = {
     </Tabs>
   ),
 }
+
+export const DependentMultiTabs: Story = {
+  render: () => (
+    <Tabs
+      defaultValue="profile"
+      variant="underline"
+      className="w-full max-w-xl border rounded-xl p-4 shadow-sm bg-background"
+    >
+      {/* Primary Configuration Groups */}
+      <TabsList className="grid w-full grid-cols-4">
+        <TabsTrigger value="profile">Profile</TabsTrigger>
+        <TabsTrigger value="security">Security</TabsTrigger>
+        <TabsTrigger value="billing">Billing</TabsTrigger>
+        <TabsTrigger value="notifications">Alerts</TabsTrigger>
+      </TabsList>
+
+      {/* Nested Configuration Suite inside Profile */}
+      <TabsContent value="profile" className="p-0 mt-0">
+        <Tabs defaultValue="profile-general" variant="underline" className="w-full">
+          <TabsList className="grid w-full grid-cols-3 bg-muted/30">
+            <TabsTrigger value="profile-general">General</TabsTrigger>
+            <TabsTrigger value="profile-social">Socials</TabsTrigger>
+            <TabsTrigger value="profile-team">Teams</TabsTrigger>
+          </TabsList>
+          <TabsContent value="profile-general" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">Account Info</h4>
+            <p className="text-sm text-muted-foreground">
+              Modify your primary display name, company URL, and timezones.
+            </p>
+          </TabsContent>
+          <TabsContent value="profile-social" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">Connected Profiles</h4>
+            <p className="text-sm text-muted-foreground">
+              Link GitHub, Twitter, or LinkedIn directly to your active public portal.
+            </p>
+          </TabsContent>
+          <TabsContent value="profile-team" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">Organization Seats</h4>
+            <p className="text-sm text-muted-foreground">
+              Assign executive roles, invite developers, and allocate operational permissions.
+            </p>
+          </TabsContent>
+        </Tabs>
+      </TabsContent>
+
+      {/* Nested Configuration Suite inside Security */}
+      <TabsContent value="security" className="p-0 mt-0">
+        <Tabs defaultValue="security-mfa" variant="underline" className="w-full">
+          <TabsList className="grid w-full grid-cols-3 bg-muted/30">
+            <TabsTrigger value="security-mfa">Two-Factor</TabsTrigger>
+            <TabsTrigger value="security-keys">API Keys</TabsTrigger>
+            <TabsTrigger value="security-logs">Audit Logs</TabsTrigger>
+          </TabsList>
+          <TabsContent value="security-mfa" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">Multi-Factor Authentication</h4>
+            <p className="text-sm text-muted-foreground">
+              Secure your account by requiring an additional OTP token upon login.
+            </p>
+          </TabsContent>
+          <TabsContent value="security-keys" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">API Integrations</h4>
+            <p className="text-sm text-muted-foreground">
+              Generate secure client tokens to connect external microservices to the API.
+            </p>
+          </TabsContent>
+          <TabsContent value="security-logs" className="space-y-2 p-6">
+            <h4 className="text-base font-semibold">Security Footprint</h4>
+            <p className="text-sm text-muted-foreground">
+              Review all IP locations, active browser sessions, and login history timestamps.
+            </p>
+          </TabsContent>
+        </Tabs>
+      </TabsContent>
+
+      <TabsContent value="billing" className="p-6 space-y-2 border-t">
+        <h4 className="text-base font-semibold">Subscriptions & Payments</h4>
+        <p className="text-sm text-muted-foreground">
+          Update your corporate credit cards, download invoices, or upgrade tiers.
+        </p>
+      </TabsContent>
+
+      <TabsContent value="notifications" className="p-6 space-y-2 border-t">
+        <h4 className="text-base font-semibold">Email Preferences</h4>
+        <p className="text-sm text-muted-foreground">
+          Control which system events trigger automated webhooks or push notifications.
+        </p>
+      </TabsContent>
+    </Tabs>
+  ),
+}
