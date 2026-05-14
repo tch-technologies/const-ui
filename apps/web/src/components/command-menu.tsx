@@ -1,14 +1,10 @@
-"use client"
+'use client'
 
-import * as React from "react"
-import { useRouter } from "next/navigation"
-import { Search } from "lucide-react"
+import * as React from 'react'
+import { useRouter } from 'next/navigation'
+import { Search } from 'lucide-react'
 
-import {
-  Dialog,
-  DialogContent,
-  DialogTrigger,
-} from "@thecodinghqs/ui"
+import { Dialog, DialogContent, DialogTrigger } from '@const/ui'
 import {
   Command,
   CommandEmpty,
@@ -16,9 +12,9 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@thecodinghqs/ui"
-import { Button } from "@thecodinghqs/ui"
-import { docsConfig } from "@/config/docs"
+} from '@const/ui'
+import { Button } from '@const/ui'
+import { docsConfig } from '@/config/docs'
 
 export function CommandMenu() {
   const router = useRouter()
@@ -26,13 +22,13 @@ export function CommandMenu() {
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
-      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+      if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
         e.preventDefault()
         setOpen((open) => !open)
       }
     }
-    document.addEventListener("keydown", down)
-    return () => document.removeEventListener("keydown", down)
+    document.addEventListener('keydown', down)
+    return () => document.removeEventListener('keydown', down)
   }, [])
 
   const runCommand = React.useCallback((command: () => unknown) => {
@@ -50,7 +46,7 @@ export function CommandMenu() {
           <span className="hidden lg:inline-flex">Search documentation...</span>
           <span className="inline-flex lg:hidden">Search...</span>
           <kbd className="pointer-events-none absolute right-1.5 top-1.5 hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
-            <span className="text-xs">⌘</span>K
+            <span className="text-xs">âŒ˜</span>K
           </kbd>
         </Button>
       </DialogTrigger>

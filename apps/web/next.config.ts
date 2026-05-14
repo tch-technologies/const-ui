@@ -1,7 +1,7 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  transpilePackages: ['@thecodinghqs/ui'],
+  transpilePackages: ['@const/ui'],
 }
 
 export default nextConfig

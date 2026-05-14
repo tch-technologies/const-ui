@@ -1,6 +1,6 @@
 import type { Preview } from '@storybook/react'
 import theme from './theme'
-import '@thecodinghqs/ui/dist/index.css' // Import the compiled CSS from the UI package
+import '@const/ui/dist/index.css' // Import the compiled CSS from the UI package
 
 const preview: Preview = {
   parameters: {

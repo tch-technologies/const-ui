@@ -1,5 +1,5 @@
 {
-  "name": "@thecodinghqs/ui",
+  "name": "@const/ui",
   "version": "0.3.0",
   "description": "A React UI component library",
   "main": "./src/index.ts",

@@ -1,25 +1,25 @@
-# @thecodinghqs/ui
+# @const/ui
 
 A production-ready React UI component library.
 
-[![npm version](https://img.shields.io/npm/v/@thecodinghqs/ui.svg?style=flat-square)](https://www.npmjs.com/package/@thecodinghqs/ui)
-[![license](https://img.shields.io/npm/l/@thecodinghqs/ui.svg?style=flat-square)](https://github.com/your-username/my-ui-lib-monorepo/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@const/ui.svg?style=flat-square)](https://www.npmjs.com/package/@const/ui)
+[![license](https://img.shields.io/npm/l/@const/ui.svg?style=flat-square)](https://github.com/your-username/my-ui-lib-monorepo/blob/main/LICENSE)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/your-username/my-ui-lib-monorepo/ci.yml?branch=main&style=flat-square)](https://github.com/your-username/my-ui-lib-monorepo/actions)
 
 ## Installation
 
 ```bash
-npm install @thecodinghqs/ui
+npm install @const/ui
 # or
-pnpm add @thecodinghqs/ui
+pnpm add @const/ui
 # or
-yarn add @thecodinghqs/ui
+yarn add @const/ui
 ```
 
 ## Usage
 
 ```tsx
-import { Button } from '@thecodinghqs/ui'
+import { Button } from '@const/ui'
 
 export default function App() {
   return (

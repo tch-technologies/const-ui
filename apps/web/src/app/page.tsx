@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
-import { Button } from '@thecodinghqs/ui'
+import { Button } from '@const/ui'
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
           href="/docs"
           className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium"
         >
-          🎉 <div className="mx-2 h-4 w-[1px] bg-border" />
+          ðŸŽ‰ <div className="mx-2 h-4 w-[1px] bg-border" />
           Introducing TheCodingHQs UI
           <ArrowRight className="ml-1 h-4 w-4" />
         </Link>

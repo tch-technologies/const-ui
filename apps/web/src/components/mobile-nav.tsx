@@ -1,28 +1,30 @@
-"use client"
+'use client'
 
-import * as React from "react"
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
-import { Button } from "@thecodinghqs/ui"
-import { Sidebar } from "./sidebar"
+import * as React from 'react'
+import Link from 'next/link'
+import { Menu, X } from 'lucide-react'
+import { Button } from '@const/ui'
+import { Sidebar } from './sidebar'
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false)
 
   React.useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false)
-    document.addEventListener("keydown", onKey)
-    return () => document.removeEventListener("keydown", onKey)
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false)
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
   }, [])
 
   React.useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : ""
-    return () => { document.body.style.overflow = "" }
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
   }, [open])
 
   return (
     <>
-      {/* Hamburger — hidden on desktop via .mobile-hamburger CSS class */}
+      {/* Hamburger â€” hidden on desktop via .mobile-hamburger CSS class */}
       <div className="mobile-hamburger">
         <Button
           variant="ghost"
@@ -39,11 +41,11 @@ export function MobileNav() {
       {open && (
         <div
           style={{
-            position: "fixed",
+            position: 'fixed',
             inset: 0,
             zIndex: 50,
-            background: "rgba(0,0,0,0.5)",
-            backdropFilter: "blur(4px)",
+            background: 'rgba(0,0,0,0.5)',
+            backdropFilter: 'blur(4px)',
           }}
           onClick={() => setOpen(false)}
           aria-hidden="true"
@@ -52,16 +54,12 @@ export function MobileNav() {
 
       {/* Slide-in panel */}
       <aside
-        data-state={open ? "open" : "closed"}
+        data-state={open ? 'open' : 'closed'}
         className="mobile-sheet"
         aria-label="Site navigation"
       >
         <div className="mobile-sheet-header">
-          <Link
-            href="/"
-            className="site-logo"
-            onClick={() => setOpen(false)}
-          >
+          <Link href="/" className="site-logo" onClick={() => setOpen(false)}>
             <span className="site-logo-icon">TC</span>
             <span style={{ fontWeight: 600 }}>TheCodingHQs UI</span>
           </Link>
