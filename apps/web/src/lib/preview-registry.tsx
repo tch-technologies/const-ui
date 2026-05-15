@@ -430,7 +430,7 @@ function TabsNestedDemo() {
 
 function TabsCurvedDemo() {
   return (
-    <div className="w-full max-w-lg p-8 rounded-xl bg-[#f3e8e0] dark:bg-[#1a1614]">
+    <div className="w-full max-w-lg p-8 rounded-xl bg-secondary">
       <Tabs defaultValue="home" className="w-full" variant="curved">
         <TabsList className="px-4">
           <TabsTrigger value="home" className="gap-2">
@@ -786,7 +786,7 @@ import { Home, Sparkles, Users } from "lucide-react"
 
 export function TabsCurvedDemo() {
   return (
-    <div className="w-full max-w-lg p-8 rounded-xl bg-[#f3e8e0] dark:bg-[#1a1614]">
+    <div className="w-full max-w-lg p-8 rounded-xl bg-secondary">
       <Tabs defaultValue="home" className="w-full" variant="curved">
         <TabsList className="px-4">
           <TabsTrigger value="home" className="gap-2">
