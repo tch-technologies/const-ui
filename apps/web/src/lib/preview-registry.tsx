@@ -411,14 +411,14 @@ function TabsNestedDemo() {
         </Tabs>
       </TabsContent>
 
-      <TabsContent value="billing" className="p-2 space-y-2">
+      <TabsContent value="billing" className="p-6 space-y-2">
         <h4 className="text-base font-semibold">Subscriptions & Payments</h4>
         <p className="text-sm text-muted-foreground">
           Update your corporate credit cards, download invoices, or upgrade tiers.
         </p>
       </TabsContent>
 
-      <TabsContent value="notifications" className="p-2 space-y-2">
+      <TabsContent value="notifications" className="p-6 space-y-2">
         <h4 className="text-base font-semibold">Email Preferences</h4>
         <p className="text-sm text-muted-foreground">
           Control which system events trigger automated webhooks or push notifications.
@@ -898,7 +898,7 @@ export function TabsNestedDemo() {
 
       <TabsContent
         value="billing"
-        className="p-2 space-y-2"
+        className="p-6 space-y-2"
       >
         <h4 className="text-base font-semibold">Subscriptions & Payments</h4>
         <p className="text-sm text-muted-foreground">Update your corporate credit cards, download invoices, or upgrade tiers.</p>
@@ -906,7 +906,7 @@ export function TabsNestedDemo() {
 
       <TabsContent
         value="notifications"
-        className="p-2 space-y-2"
+        className="p-6 space-y-2"
       >
         <h4 className="text-base font-semibold">Email Preferences</h4>
         <p className="text-sm text-muted-foreground">Control which system events trigger automated webhooks or push notifications.</p>
